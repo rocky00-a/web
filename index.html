@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+    <link rel="stylesheet" href="pp.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f8f8;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        img {
+            width: 50vw; /* 50% of the viewport width */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .no:hover {
+            background-color: #d32f2f;
+        }
+
+        h1 {
+            color: blue; /* Set the text color to blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://www.youtube.com/watch?v=4gbun1_OJQQ&list=RDGMEMCMFH2exzjBeE_zAHHJOdxg&start_radio=1&rv=D102mD74i3g" target="_blank">
+            <img src="C:\Users\dipan\OneDrive\Documents\Desktop\code\purpose\heart.jpg" alt="Heart">
+        </a>
+        <h1>Do You Love Me?</h1>
+        <button class="yes" onclick="respondYes()">Yes</button>
+        <button class="no" onmouseover="moveNoButton(event)" onclick="respondNo()">No</button>
+    </div>
+
+    <script>
+        function respondYes() {
+            alert("I love you too!");
+        }
+
+        function respondNo() {
+            alert("Oh no! Why not?");
+        }
+
+        function moveNoButton(event) {
+            const button = event.target;
+            const container = document.querySelector('.container');
+            const containerRect = container.getBoundingClientRect();
+            const buttonRect = button.getBoundingClientRect();
+
+            const newTop = Math.random() * (containerRect.height - buttonRect.height);
+            const newLeft = Math.random() * (containerRect.width - buttonRect.width);
+
+            button.style.position = 'absolute';
+            button.style.top = `${newTop}px`;
+            button.style.left = `${newLeft}px`;
+        }
+    </script>
+</body>
+</html>
+
