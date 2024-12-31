@@ -1,0 +1,49 @@
+/* Body and background styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://www.w3schools.com/css/img_lights.jpg'); /* Heart background URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Centering the container */
+.container {
+    text-align: center;
+    position: relative;
+}
+
+/* Styling the buttons */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* Styling the Yes button */
+.yes {
+    background-color: #4CAF50;
+    color: white;
+    margin: 20px;
+}
+
+/* Styling the No button */
+.no {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Hover effect for No button */
+.no:hover {
+    background-color: #d32f2f;
+}
+
